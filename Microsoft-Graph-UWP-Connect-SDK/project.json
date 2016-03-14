@@ -1,6 +1,7 @@
 ﻿{
   "dependencies": {
-    "Microsoft.Graph.Authentication": "0.9.4-rc",
+    "Microsoft.Graph.OAuth2": "1.0.1-rc",
+    "Microsoft.Graph": "1.0.3-rc",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0"
   },
   "frameworks": {

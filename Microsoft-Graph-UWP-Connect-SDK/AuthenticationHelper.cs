@@ -10,7 +10,7 @@ using Windows.Security.Authentication.Web;
 using Windows.Security.Authentication.Web.Core;
 using Windows.Security.Credentials;
 using Windows.Storage;
-using Microsoft.Graph.Authentication;
+using Microsoft.Graph.OAuth2;
 using Microsoft.Graph;
 
 namespace Microsoft_Graph_UWP_Connect_SDK
