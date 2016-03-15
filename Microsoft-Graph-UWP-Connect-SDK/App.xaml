@@ -11,7 +11,7 @@ See LICENSE in the project root for license information. -->
     <Application.Resources>
         <!-- Add your client id here. -->
         <!--<x:String x:Key="ida:ClientID">aed1bde9-797f-4f5c-b65b-211585f9cdfe</x:String>-->
-        <x:String x:Key="ida:ClientID">02139874-fa17-4b59-88a8-717796ced4ba</x:String>
+        <x:String x:Key="ida:ClientID"></x:String>
         <x:String x:Key="ida:ReturnUrl">urn:ietf:wg:oauth:2.0:oob</x:String>
         <!--<x:String x:Key="ida:AADInstance">https://login.microsoftonline.com/</x:String>-->
         <!-- Add your developer tenant domain here. -->
