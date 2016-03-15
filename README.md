@@ -1,6 +1,4 @@
-﻿# Office 365 Connect Sample for UWP Using Microsoft Graph
-
-[[JIM: Update title to move Microsoft Graph to the start? I.e., "Microsoft Graph Connect Sample for UWP Accessing Office 365"?]]
+﻿# Microsoft Graph Connect Sample for UWP
 
 **Table of contents**
 
@@ -14,17 +12,10 @@
 <a name="introduction"></a>
 ##Introduction
 
-This sample shows how to connect your Windows 10 Universal app to Office 365 using the Microsoft Graph API (previously called Office 365 unified API) to send an email. It uses the Microsoft Graph SDK to handle user authentication and manipulation of the data returned by the Microsoft Graph. The sample uses the v2.0 authentication endpoint, which enables users to sign in with either their personal or work or school Microsoft accounts.
-
-> Note: To understand the code for calling Microsoft Graph in a UWP app, see [Call Microsoft Graph in a universal Windows 10 app] (https://graph.microsoft.io/docs/platform/uwp).
-
+This sample shows how to connect your Windows 10 Universal app to Office 365 using the Microsoft Graph API (previously called Office 365 unified API) to send an email. It uses the Microsoft Graph SDK and Microsoft.Graph.OAuth2 helper library to handle user authentication and manipulation of the data returned by the Microsoft Graph. The sample uses the v2.0 authentication endpoint, which enables users to sign in with either their personal or work or school Microsoft accounts.
 
 <a name="prerequisites"></a>
 ## Prerequisites ##
-
-**Note:** Try out the [Get started with Office 365 APIs](http://dev.office.com/getting-started/office365apis?platform=option-windowsuniversal#setup) page, which simplifies registration so you can get this sample running faster.
-
-[[JIM: Should we remove this note? The Get Started page currently sends the user down the path of using an Office 365 account and registering their app with Azure AD. Do we want to send them there, when this sample uses the new v2.0 auth endpoint, thereby bypassing a lot of the set-up needed with Azure AD auth?]]
 
 This sample requires the following:  
 
@@ -49,46 +40,6 @@ This sample requires the following:
 
 7. Select **Save**.
 
-
-<!--
-
-[[JIM: I commented these next two sections out, instead of deleting them, in case there's something in them that's still relevant to this sample. If that's not the case, feel free to get rid of them. Thanks.]]
-
-<a name="redirect_old"></a>
-## Find the system-assigned redirect URI for the app
-
-Before you can register the application in the Azure portal, you need to find out the application's redirect URI.  Windows 10 provides each application with a unique URI and ensures that messages sent to that URI are only sent to that application.  To determine the redirect URI for your project:
-
-1. Open the solution in Visual Studio 2015. 
-2. Make sure that your Platform Target is set to x86 or x64.
-3. Press F5.
-4. After the app launches, choose the **Copy** button ![alt text](/readme-images/copy_icon.png) located in the menu on the top left of the app. This will copy the redirect URI for the app to the clipboard. 
-5. Store this value. You will use it when registering the app, as described in the following section. 
-
-
-The redirect URI value will look something like this:
-```
-ms-appx-web://Microsoft.AAD.BrokerPlugIn/S-1-15-2-694665007-945573255-503870805-3898041910-4166806349-50292026-2305040851
-```
-
-
-<a name="register_old"></a>
-##Register and configure the app
-
-1.	Sign in to the [Azure Management Portal](http://aka.ms/i5b8dz) using your Azure AD credentials.
-2.	Click **Active Directory** on the left menu, then select the directory for your Office 365 developer site.
-3.	On the top menu, click **Applications**.
-4.	Click **Add** from the bottom menu.
-5.	On the **What do you want to do page**, click **Add an application my organization is developing**.
-6.	On the **Tell us about your application page**, select **NATIVE CLIENT APPLICATION** for type and specify a name for the app, for example **O365-UWP-Connect**.
-7.	Click the arrow icon on the lower-right corner of the page.
-8.	On the **Application information** page, enter the redirect URI value that you obtained during the previous step.
-9.	Once the application is successfully added, you'll be taken to the **Quick Start** page for the application. From there, select **Configure** in the top menu.
-10.	Under **permissions to other applications**, select **Add application**. In the dialog box, select the **Microsoft Graph** application. After you return to the application configuration page, select the **Send mail as a user** and **Sign in and read user profile** permissions.
-11.	Copy the value specified for **Client ID** on the **Configure** page.
-12.	Click **Save** in the bottom menu.
--->
-
 <a name="build"></a>
 ## Build and debug ##
 
@@ -98,7 +49,6 @@ ms-appx-web://Microsoft.AAD.BrokerPlugIn/S-1-15-2-694665007-945573255-503870805-
 ![Office 365 UWP Microsoft Graph connect sample](/readme-images/appId_and_redirectURI.png "Client ID value in App.xaml file")`
 
 2. Press F5 to build and debug. Run the solution and sign in with either your personal or work or school account.
-
 
 <a name="questions"></a>
 ## Questions and comments
@@ -119,6 +69,6 @@ Your feedback is important to us. Connect with us on [Stack Overflow](http://sta
 
 
 ## Copyright
-Copyright (c) 2015 Microsoft. All rights reserved.
+Copyright (c) 2016 Microsoft. All rights reserved.
 
 
