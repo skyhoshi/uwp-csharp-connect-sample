@@ -17,7 +17,7 @@ namespace Microsoft_Graph_UWP_Connect_SDK
 {
     internal static class AuthenticationHelper
     {
-        // The Client ID is used by the application to uniquely identify itself to Microsoft Azure Active Directory (AD).
+        // The Client ID is used by the application to uniquely identify itself to the v2.0 authentication endpoint.
         static string clientId = App.Current.Resources["ida:ClientID"].ToString();
 
         static string returnUrl = App.Current.Resources["ida:ReturnUrl"].ToString();
