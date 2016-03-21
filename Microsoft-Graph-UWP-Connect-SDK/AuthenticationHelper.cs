@@ -24,8 +24,7 @@ namespace Microsoft_Graph_UWP_Connect_SDK
 
         private static GraphServiceClient graphClient = null;
 
-        // Get an access token for the given context and resourceId. An attempt is first made to 
-        // acquire the token silently. If that fails, then we try to acquire the token by prompting the user.
+        // Get a Graph client.
         public static async Task<GraphServiceClient> GetAuthenticatedClientAsync()
         {
             if (graphClient == null)
@@ -57,7 +56,7 @@ namespace Microsoft_Graph_UWP_Connect_SDK
         /// </summary>
         public static void SignOut()
         {
-            //Clear stored values from last authentication.
+            //Dispose Graph client
             graphClient.Dispose();
             graphClient = null;
 
