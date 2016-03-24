@@ -29,9 +29,9 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Graph/1.0.3-rc": {
+      "Microsoft.Graph/1.0.4-rc": {
         "dependencies": {
-          "Newtonsoft.Json": "[8.0.2, )"
+          "Newtonsoft.Json": "[6.0.2, )"
         },
         "compile": {
           "lib/portable-net45+netcore50+wpa81+win8/Microsoft.Graph.dll": {}
@@ -223,12 +223,12 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Newtonsoft.Json/8.0.2": {
+      "Newtonsoft.Json/6.0.2": {
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+          "lib/netcore45/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+          "lib/netcore45/Newtonsoft.Json.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -1594,9 +1594,9 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Graph/1.0.3-rc": {
+      "Microsoft.Graph/1.0.4-rc": {
         "dependencies": {
-          "Newtonsoft.Json": "[8.0.2, )"
+          "Newtonsoft.Json": "[6.0.2, )"
         },
         "compile": {
           "lib/portable-net45+netcore50+wpa81+win8/Microsoft.Graph.dll": {}
@@ -1831,12 +1831,12 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Newtonsoft.Json/8.0.2": {
+      "Newtonsoft.Json/6.0.2": {
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+          "lib/netcore45/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+          "lib/netcore45/Newtonsoft.Json.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -3249,9 +3249,9 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Graph/1.0.3-rc": {
+      "Microsoft.Graph/1.0.4-rc": {
         "dependencies": {
-          "Newtonsoft.Json": "[8.0.2, )"
+          "Newtonsoft.Json": "[6.0.2, )"
         },
         "compile": {
           "lib/portable-net45+netcore50+wpa81+win8/Microsoft.Graph.dll": {}
@@ -3472,12 +3472,12 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Newtonsoft.Json/8.0.2": {
+      "Newtonsoft.Json/6.0.2": {
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+          "lib/netcore45/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+          "lib/netcore45/Newtonsoft.Json.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -4876,9 +4876,9 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Graph/1.0.3-rc": {
+      "Microsoft.Graph/1.0.4-rc": {
         "dependencies": {
-          "Newtonsoft.Json": "[8.0.2, )"
+          "Newtonsoft.Json": "[6.0.2, )"
         },
         "compile": {
           "lib/portable-net45+netcore50+wpa81+win8/Microsoft.Graph.dll": {}
@@ -5118,12 +5118,12 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Newtonsoft.Json/8.0.2": {
+      "Newtonsoft.Json/6.0.2": {
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+          "lib/netcore45/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+          "lib/netcore45/Newtonsoft.Json.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -6536,9 +6536,9 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Graph/1.0.3-rc": {
+      "Microsoft.Graph/1.0.4-rc": {
         "dependencies": {
-          "Newtonsoft.Json": "[8.0.2, )"
+          "Newtonsoft.Json": "[6.0.2, )"
         },
         "compile": {
           "lib/portable-net45+netcore50+wpa81+win8/Microsoft.Graph.dll": {}
@@ -6759,12 +6759,12 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Newtonsoft.Json/8.0.2": {
+      "Newtonsoft.Json/6.0.2": {
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+          "lib/netcore45/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+          "lib/netcore45/Newtonsoft.Json.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -8163,9 +8163,9 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Graph/1.0.3-rc": {
+      "Microsoft.Graph/1.0.4-rc": {
         "dependencies": {
-          "Newtonsoft.Json": "[8.0.2, )"
+          "Newtonsoft.Json": "[6.0.2, )"
         },
         "compile": {
           "lib/portable-net45+netcore50+wpa81+win8/Microsoft.Graph.dll": {}
@@ -8405,12 +8405,12 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Newtonsoft.Json/8.0.2": {
+      "Newtonsoft.Json/6.0.2": {
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+          "lib/netcore45/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+          "lib/netcore45/Newtonsoft.Json.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -9823,9 +9823,9 @@
           "lib/netcore50/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.Graph/1.0.3-rc": {
+      "Microsoft.Graph/1.0.4-rc": {
         "dependencies": {
-          "Newtonsoft.Json": "[8.0.2, )"
+          "Newtonsoft.Json": "[6.0.2, )"
         },
         "compile": {
           "lib/portable-net45+netcore50+wpa81+win8/Microsoft.Graph.dll": {}
@@ -10046,12 +10046,12 @@
           "lib/dotnet/Microsoft.Win32.Primitives.dll": {}
         }
       },
-      "Newtonsoft.Json/8.0.2": {
+      "Newtonsoft.Json/6.0.2": {
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+          "lib/netcore45/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll": {}
+          "lib/netcore45/Newtonsoft.Json.dll": {}
         }
       },
       "System.AppContext/4.0.0": {
@@ -11466,15 +11466,15 @@
         "ref/xamarinmac20/_._"
       ]
     },
-    "Microsoft.Graph/1.0.3-rc": {
-      "sha512": "0KjgFxiRw9Oa9/++W4+6aWLRD/HkGsKXUxviJXGPPa8EUF0Vd0a1uoTLL+Vn8ZPewFvaT9+gSu5Tqd/Y/jG9WQ==",
+    "Microsoft.Graph/1.0.4-rc": {
+      "sha512": "mBquaooThsB22D6X5Xc/c6RL4LhKkGeS0ldDuyoROu1erdLDC25SF6wvZrYtTpYx70Xd30cqZHz7f+SVZVxfEg==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
         "_rels/.rels",
         "lib/portable-net45+netcore50+wpa81+win8/Microsoft.Graph.dll",
         "Microsoft.Graph.nuspec",
-        "package/services/metadata/core-properties/ea9a1b57c6be4aefb99cbfedbe505abd.psmdcp"
+        "package/services/metadata/core-properties/38002bfc3d834835970b70af0215cead.psmdcp"
       ]
     },
     "Microsoft.Graph.OAuth2/1.0.1-rc": {
@@ -12100,8 +12100,8 @@
         "ref/xamarinmac20/_._"
       ]
     },
-    "Newtonsoft.Json/8.0.2": {
-      "sha512": "e5yWmEfu68rmtG431zl9N/7PlNKQDIuiDW5MHlEFAZcecakcxrIGnKqrPAtWNILzK2oNanRB5cD150MYhECK3g==",
+    "Newtonsoft.Json/6.0.2": {
+      "sha512": "dYTDxbpOKlwlWzZLrKOXHI/AoLXdixZM4z3Ez8c5Xgy+bLZty7UWFSoI5B7hqSGntI2GWTqS0Oo8K41Fh+8POw==",
       "type": "Package",
       "files": [
         "[Content_Types].xml",
@@ -12114,12 +12114,14 @@
         "lib/net40/Newtonsoft.Json.xml",
         "lib/net45/Newtonsoft.Json.dll",
         "lib/net45/Newtonsoft.Json.xml",
-        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
-        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll",
-        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.xml",
+        "lib/netcore45/Newtonsoft.Json.dll",
+        "lib/netcore45/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+wp80+win8+monotouch+monoandroid/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+wp80+win8+monotouch+monoandroid/Newtonsoft.Json.xml",
+        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.xml",
         "Newtonsoft.Json.nuspec",
-        "package/services/metadata/core-properties/cc8c591d554640789c6a6ef6456f7772.psmdcp",
+        "package/services/metadata/core-properties/d551cad7b44049b99590a7af5d8c3365.psmdcp",
         "tools/install.ps1"
       ]
     },
@@ -14821,7 +14823,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "Microsoft.Graph >= 1.0.3-rc",
+      "Microsoft.Graph >= 1.0.4-rc",
       "Microsoft.Graph.OAuth2 >= 1.0.1-rc",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0"
     ],
