@@ -1,6 +1,5 @@
 ﻿{
   "dependencies": {
-    "Microsoft.Graph.OAuth2": "1.0.1-rc",
     "Microsoft.Graph": "1.0.4-rc",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0"
   },

@@ -40,17 +40,6 @@
           "lib/portable-net45+netcore50+wpa81+win8/Microsoft.Graph.dll": {}
         }
       },
-      "Microsoft.Graph.OAuth2/1.0.1-rc": {
-        "dependencies": {
-          "Microsoft.Graph": "[1.0.3-rc, )"
-        },
-        "compile": {
-          "lib/portable-wpa81+win8/Microsoft.Graph.OAuth2.WinStore.dll": {}
-        },
-        "runtime": {
-          "lib/portable-wpa81+win8/Microsoft.Graph.OAuth2.WinStore.dll": {}
-        }
-      },
       "Microsoft.NETCore/5.0.0": {
         "dependencies": {
           "Microsoft.CSharp": "[4.0.0, )",
@@ -1603,17 +1592,6 @@
         },
         "runtime": {
           "lib/portable-net45+netcore50+wpa81+win8/Microsoft.Graph.dll": {}
-        }
-      },
-      "Microsoft.Graph.OAuth2/1.0.1-rc": {
-        "dependencies": {
-          "Microsoft.Graph": "[1.0.3-rc, )"
-        },
-        "compile": {
-          "lib/portable-wpa81+win8/Microsoft.Graph.OAuth2.WinStore.dll": {}
-        },
-        "runtime": {
-          "lib/portable-wpa81+win8/Microsoft.Graph.OAuth2.WinStore.dll": {}
         }
       },
       "Microsoft.NETCore/5.0.0": {
@@ -3260,17 +3238,6 @@
           "lib/portable-net45+netcore50+wpa81+win8/Microsoft.Graph.dll": {}
         }
       },
-      "Microsoft.Graph.OAuth2/1.0.1-rc": {
-        "dependencies": {
-          "Microsoft.Graph": "[1.0.3-rc, )"
-        },
-        "compile": {
-          "lib/portable-wpa81+win8/Microsoft.Graph.OAuth2.WinStore.dll": {}
-        },
-        "runtime": {
-          "lib/portable-wpa81+win8/Microsoft.Graph.OAuth2.WinStore.dll": {}
-        }
-      },
       "Microsoft.NETCore/5.0.0": {
         "dependencies": {
           "Microsoft.CSharp": "[4.0.0, )",
@@ -4885,17 +4852,6 @@
         },
         "runtime": {
           "lib/portable-net45+netcore50+wpa81+win8/Microsoft.Graph.dll": {}
-        }
-      },
-      "Microsoft.Graph.OAuth2/1.0.1-rc": {
-        "dependencies": {
-          "Microsoft.Graph": "[1.0.3-rc, )"
-        },
-        "compile": {
-          "lib/portable-wpa81+win8/Microsoft.Graph.OAuth2.WinStore.dll": {}
-        },
-        "runtime": {
-          "lib/portable-wpa81+win8/Microsoft.Graph.OAuth2.WinStore.dll": {}
         }
       },
       "Microsoft.NETCore/5.0.0": {
@@ -6547,17 +6503,6 @@
           "lib/portable-net45+netcore50+wpa81+win8/Microsoft.Graph.dll": {}
         }
       },
-      "Microsoft.Graph.OAuth2/1.0.1-rc": {
-        "dependencies": {
-          "Microsoft.Graph": "[1.0.3-rc, )"
-        },
-        "compile": {
-          "lib/portable-wpa81+win8/Microsoft.Graph.OAuth2.WinStore.dll": {}
-        },
-        "runtime": {
-          "lib/portable-wpa81+win8/Microsoft.Graph.OAuth2.WinStore.dll": {}
-        }
-      },
       "Microsoft.NETCore/5.0.0": {
         "dependencies": {
           "Microsoft.CSharp": "[4.0.0, )",
@@ -8172,17 +8117,6 @@
         },
         "runtime": {
           "lib/portable-net45+netcore50+wpa81+win8/Microsoft.Graph.dll": {}
-        }
-      },
-      "Microsoft.Graph.OAuth2/1.0.1-rc": {
-        "dependencies": {
-          "Microsoft.Graph": "[1.0.3-rc, )"
-        },
-        "compile": {
-          "lib/portable-wpa81+win8/Microsoft.Graph.OAuth2.WinStore.dll": {}
-        },
-        "runtime": {
-          "lib/portable-wpa81+win8/Microsoft.Graph.OAuth2.WinStore.dll": {}
         }
       },
       "Microsoft.NETCore/5.0.0": {
@@ -9834,17 +9768,6 @@
           "lib/portable-net45+netcore50+wpa81+win8/Microsoft.Graph.dll": {}
         }
       },
-      "Microsoft.Graph.OAuth2/1.0.1-rc": {
-        "dependencies": {
-          "Microsoft.Graph": "[1.0.3-rc, )"
-        },
-        "compile": {
-          "lib/portable-wpa81+win8/Microsoft.Graph.OAuth2.WinStore.dll": {}
-        },
-        "runtime": {
-          "lib/portable-wpa81+win8/Microsoft.Graph.OAuth2.WinStore.dll": {}
-        }
-      },
       "Microsoft.NETCore/5.0.0": {
         "dependencies": {
           "Microsoft.CSharp": "[4.0.0, )",
@@ -11475,17 +11398,6 @@
         "lib/portable-net45+netcore50+wpa81+win8/Microsoft.Graph.dll",
         "Microsoft.Graph.nuspec",
         "package/services/metadata/core-properties/38002bfc3d834835970b70af0215cead.psmdcp"
-      ]
-    },
-    "Microsoft.Graph.OAuth2/1.0.1-rc": {
-      "sha512": "bdW76cvh+pOVLrzOkqPoViAAqK4tBWR+djhiAyo5tN0xpPKngLeaRk3yP7nlXqS+2gW97sMQ1YJRptmUMFHuyw==",
-      "type": "Package",
-      "files": [
-        "[Content_Types].xml",
-        "_rels/.rels",
-        "lib/portable-wpa81+win8/Microsoft.Graph.OAuth2.WinStore.dll",
-        "Microsoft.Graph.OAuth2.nuspec",
-        "package/services/metadata/core-properties/95236b31884e4ffc9c88ba0c853eb411.psmdcp"
       ]
     },
     "Microsoft.NETCore/5.0.0": {
@@ -14824,7 +14736,6 @@
   "projectFileDependencyGroups": {
     "": [
       "Microsoft.Graph >= 1.0.4-rc",
-      "Microsoft.Graph.OAuth2 >= 1.0.1-rc",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.0.0"
     ],
     "UAP,Version=v10.0": []
