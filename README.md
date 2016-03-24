@@ -50,6 +50,35 @@ This sample requires the following:
 
 2. Press F5 to build and debug. Run the solution and sign in with either your personal or work or school account.
 
+###Summary of key methods
+
+The code in the main page of the app is relatively straight-forward and self-explanatory, as the calls for authentication and email service actually occur in the helper classes. The main page code primarily consists of event handlers for the two buttons:
+
+- **ConnectButton_Click**
+	
+	This method calls the **GetAuthenticatedClientAsync** method to acquire a **GraphClient** object representing the current user, which it uses to set user email address and display name. If this is successful, it also enables the **send mail** button and the text box where the user can enter an email address, and populates that text box with the user's own email address.
+
+- **MailButton_Click**
+	
+	This method calls the **ComposeAndSendMailAsync** method, using the email address and display name variables set during **ConnectButton_Click**. If this method call is successful, it also updates the UI text accordingly.
+
+With that in mind, it's worth looking at two methods in the helper classes in a little more detail:
+
+- **GetAuthenticatedClientAsync**
+	
+	This method of the **AuthticationHelper** class authenticates the user with the v2.0 authentication service.
+
+	It does this by creating an AppConfig object that specifies the app client ID, return URL, and the scopes requested by the app. It then uses this AppConfig object to construct an **OAuth2AuthenticationProvider** object, and calls the **AuthenticateAsync** method on the authentication provider. Finally, it creates a GraphClient object using the **OAuth2AuthenticationProvider** object.
+
+	The **SignInCurrentUserAsync** method on the main page can then read user from this **GraphClient** object and set the user email address and display name.
+
+- **ComposeAndSendMailAsync**
+
+	This method of the **MailHelper** class uses the Microsoft Graph SDK to authenticate the user with the v2.0 authentication service, compose a sample email, and then send the email using the user's account.
+
+	It does this by declaring a **GraphClient** object and setting it equal to the return value of **AuthenticationHelper.GetAuthenticatedClientAsync**. The method then composes the sample email, using various objects in the **Microsoft.Graph** namespace. Finally, it calls the **SendMail** method.
+
+
 <a name="questions"></a>
 ## Questions and comments
 
