@@ -56,8 +56,6 @@ namespace Microsoft_Graph_UWP_Connect_SDK
         /// </summary>
         public static void SignOut()
         {
-            //Dispose Graph client
-            graphClient.Dispose();
             graphClient = null;
 
         }
