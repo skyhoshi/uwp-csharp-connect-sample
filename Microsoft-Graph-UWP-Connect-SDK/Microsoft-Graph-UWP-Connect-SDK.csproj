@@ -98,20 +98,13 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="AuthenticationHelper.cs" />
-    <Compile Include="Authentication\AccountSession.cs" />
-    <Compile Include="Authentication\AppConfig.cs" />
-    <Compile Include="Authentication\IOAuthRequestStringBuilder.cs" />
     <Compile Include="Authentication\OAuth2AuthenticationProvider.cs" />
-    <Compile Include="Authentication\OAuthErrorHandler.cs" />
-    <Compile Include="Authentication\OAuthRequestStringBuilder.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="MailHelper.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Web\IWebAuthenticationUi.cs" />
-    <Compile Include="Web\WebAuthenticationBrokerWebAuthenticationUi.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
