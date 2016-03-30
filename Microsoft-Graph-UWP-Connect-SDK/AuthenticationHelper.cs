@@ -30,17 +30,13 @@ namespace Microsoft_Graph_UWP_Connect_SDK
             if (graphClient == null)
             {
                 var authenticationProvider = new OAuth2AuthenticationProvider(
-                    new AppConfig
+                    clientId,
+                    returnUrl,
+                    new string[]
                     {
-                        ClientId = clientId,
-                        ReturnUrl = returnUrl,
-                        Scopes = new string[]
-                        {
-                        "openid",
                         "offline_access",
                         "https://graph.microsoft.com/User.Read",
                         "https://graph.microsoft.com/Mail.Send",
-                        },
                     });
 
                 await authenticationProvider.AuthenticateAsync();
