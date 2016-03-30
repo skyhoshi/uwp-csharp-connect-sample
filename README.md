@@ -12,7 +12,7 @@
 <a name="introduction"></a>
 ##Introduction
 
-This sample shows how to connect your Windows 10 Universal app to Office 365 using the Microsoft Graph API (previously called Office 365 unified API) to send an email. It uses the Microsoft Graph SDK and Microsoft.Graph.OAuth2 helper library to work with data returned by Microsoft Graph. The sample uses the v2.0 authentication endpoint, which enables users to sign in with either their personal or work or school Microsoft accounts.
+This sample shows how to connect your Windows 10 Universal app to Office 365 using the Microsoft Graph API (previously called Office 365 unified API) to send an email. It uses the [Microsoft Graph .NET Client Library](https://github.com/microsoftgraph/msgraph-sdk-dotnet) to work with data returned by Microsoft Graph. The sample uses the v2.0 authentication endpoint, which enables users to sign in with either their personal or work or school Microsoft accounts.
 
 <a name="prerequisites"></a>
 ## Prerequisites ##
