@@ -1,4 +1,4 @@
-﻿# Microsoft Graph Connect Sample for UWP
+# Microsoft Graph Connect Sample for UWP
 
 **Table of contents**
 
@@ -56,7 +56,7 @@ The code in the main page of the app is relatively straight-forward and self-exp
 
 - **ConnectButton_Click**
 	
-	This method calls the **GetAuthenticatedClientAsync** method to acquire a **GraphClient** object representing the current user, which it uses to set user email address and display name. If this is successful, it also enables the **send mail** button and the text box where the user can enter an email address, and populates that text box with the user's own email address.
+	This method calls the **GetAuthenticatedClientAsync** method to acquire a **GraphServicesClient** object representing the current user, which it uses to set user email address and display name. If this is successful, it also enables the **send mail** button and the text box where the user can enter an email address, and populates that text box with the user's own email address.
 
 - **MailButton_Click**
 	
@@ -66,17 +66,17 @@ With that in mind, it's worth looking at two methods in the helper classes in a 
 
 - **GetAuthenticatedClientAsync**
 	
-	This method of the **AuthticationHelper** class authenticates the user with the v2.0 authentication service.
+	This method of the **AuthenticationHelper** class authenticates the user with the v2.0 authentication service.
 
-	It does this by creating an AppConfig object that specifies the app client ID, return URL, and the scopes requested by the app. It then uses this AppConfig object to construct an **OAuth2AuthenticationProvider** object, and calls the **AuthenticateAsync** method on the authentication provider. Finally, it creates a GraphClient object using the **OAuth2AuthenticationProvider** object.
+	It does this by creating an AppConfig object that specifies the app client ID, return URL, and the scopes requested by the app. It then uses this AppConfig object to construct an **OAuth2AuthenticationProvider** object, and calls the **AuthenticateAsync** method on the authentication provider. Finally, it creates a GraphServicesClient object using the **OAuth2AuthenticationProvider** object.
 
-	The **SignInCurrentUserAsync** method on the main page can then read user from this **GraphClient** object and set the user email address and display name.
+	The **SignInCurrentUserAsync** method on the main page can then read user from this **GraphServicesClient** object and set the user email address and display name.
 
 - **ComposeAndSendMailAsync**
 
 	This method of the **MailHelper** class uses the Microsoft Graph SDK to authenticate the user with the v2.0 authentication service, compose a sample email, and then send the email using the user's account.
 
-	It does this by declaring a **GraphClient** object and setting it equal to the return value of **AuthenticationHelper.GetAuthenticatedClientAsync**. The method then composes the sample email, using various objects in the **Microsoft.Graph** namespace. Finally, it calls the **SendMail** method.
+	It does this by declaring a **GraphServicesClient** object and setting it equal to the return value of **AuthenticationHelper.GetAuthenticatedClientAsync**. The method then composes the sample email, using various objects in the **Microsoft.Graph** namespace. Finally, it calls the **SendMail** method.
 
 
 <a name="questions"></a>
