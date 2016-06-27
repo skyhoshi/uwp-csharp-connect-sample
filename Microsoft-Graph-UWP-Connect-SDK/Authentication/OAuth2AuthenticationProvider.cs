@@ -126,6 +126,8 @@ namespace Microsoft.Graph.Authentication
             if (!string.IsNullOrEmpty(this.accessToken) && !(this.expiration <= DateTimeOffset.Now.UtcDateTime.AddMinutes(5)))
             {
                 request.Headers.Authorization = new AuthenticationHeaderValue("bearer", this.accessToken);
+                // This header has been added to identify our sample in the Microsoft Graph service.  If extracting this code for your project please remove.
+                request.Headers.Add("SampleID", "uwp-csharp-connect-sample");
             }
             else
             {
