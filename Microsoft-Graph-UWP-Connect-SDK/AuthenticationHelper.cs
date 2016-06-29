@@ -46,7 +46,7 @@ namespace Microsoft_Graph_UWP_Connect_SDK
                                 var token = await GetTokenForUserAsync();
                                 requestMessage.Headers.Authorization = new AuthenticationHeaderValue("bearer", token);
                                 // This header has been added to identify our sample in the Microsoft Graph service.  If extracting this code for your project please remove.
-                                requestMessage.Headers.Add("SampleID", "xamarin-csharp-connect-sample");
+                                requestMessage.Headers.Add("SampleID", "uwp-csharp-connect-sample");
 
                             }));
                     return graphClient;
