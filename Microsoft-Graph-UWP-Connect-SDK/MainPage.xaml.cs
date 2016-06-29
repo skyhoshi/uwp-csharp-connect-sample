@@ -60,7 +60,7 @@ namespace Microsoft_Graph_UWP_Connect_SDK
         /// <returns></returns>
         public async Task<bool> SignInCurrentUserAsync()
         {
-            var graphClient = await AuthenticationHelper.GetAuthenticatedClientAsync();
+            var graphClient = AuthenticationHelper.GetAuthenticatedClient();
 
             if (graphClient != null)
             {
