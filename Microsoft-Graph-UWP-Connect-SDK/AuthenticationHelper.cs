@@ -16,7 +16,7 @@ using Microsoft.Identity.Client;
 
 namespace Microsoft_Graph_UWP_Connect_SDK
 {
-    public static class AuthenticationHelper
+    public class AuthenticationHelper
     {
         // The Client ID is used by the application to uniquely identify itself to the v2.0 authentication endpoint.
         static string clientId = App.Current.Resources["ida:ClientID"].ToString();

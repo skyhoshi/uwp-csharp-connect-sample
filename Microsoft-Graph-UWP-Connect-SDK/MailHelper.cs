@@ -14,7 +14,7 @@ using System.Net.Http.Headers;
 
 namespace Microsoft_Graph_UWP_Connect_SDK
 {
-    class MailHelper
+    public class MailHelper
     {
         /// <summary>
         /// Compose and send a new email.
