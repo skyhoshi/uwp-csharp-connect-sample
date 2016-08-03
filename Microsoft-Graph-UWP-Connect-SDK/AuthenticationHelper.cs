@@ -68,12 +68,22 @@ namespace Microsoft_Graph_UWP_Connect_SDK
         /// <returns>Token for user.</returns>
         public static async Task<string> GetTokenForUserAsync()
         {
-            if (TokenForUser == null || Expiration <= DateTimeOffset.UtcNow.AddMinutes(5))
+            AuthenticationResult authResult;
+            try
             {
-                AuthenticationResult authResult = await IdentityClientApp.AcquireTokenAsync(Scopes);
-
+                authResult = await IdentityClientApp.AcquireTokenSilentAsync(Scopes);
                 TokenForUser = authResult.Token;
-                Expiration = authResult.ExpiresOn;
+            }
+
+            catch (Exception)
+            {
+                if (TokenForUser == null || Expiration <= DateTimeOffset.UtcNow.AddMinutes(5))
+                {
+                    authResult = await IdentityClientApp.AcquireTokenAsync(Scopes);
+
+                    TokenForUser = authResult.Token;
+                    Expiration = authResult.ExpiresOn;
+                }
             }
 
             return TokenForUser;
