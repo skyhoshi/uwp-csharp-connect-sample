@@ -1,4 +1,4 @@
-# Microsoft Graph Connect Sample for UWP
+# Microsoft Graph Connect Sample for UWP (Library)
 
 **Table of contents**
 
