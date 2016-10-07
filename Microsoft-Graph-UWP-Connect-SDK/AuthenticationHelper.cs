@@ -12,20 +12,21 @@ using Windows.Security.Authentication.Web.Core;
 using Windows.Security.Credentials;
 using Windows.Storage;
 using Microsoft.Graph;
-using Microsoft.Identity.Client;
+using Microsoft.IdentityModel.Clients.ActiveDirectory;
 
 namespace Microsoft_Graph_UWP_Connect_SDK
 {
     public class AuthenticationHelper
     {
-        // The Client ID is used by the application to uniquely identify itself to the v2.0 authentication endpoint.
+        // The Client ID is used by the application to uniquely identify itself to Microsoft Azure Active Directory (AD).
         static string clientId = App.Current.Resources["ida:ClientID"].ToString();
-        public static string[] Scopes = { "https://graph.microsoft.com/User.Read", "https://graph.microsoft.com/Mail.Send" };
-
-        public static PublicClientApplication IdentityClientApp = new PublicClientApplication(clientId);
+        private static Uri returnUri = new Uri(App.Current.Resources["ida:ReturnUrl"].ToString());
+        private static readonly string CommonAuthority = App.Current.Resources["ida:AADInstance"].ToString() + @"common";
+        //Property for storing the authentication context.
+        public static AuthenticationContext context = new AuthenticationContext(CommonAuthority);
 
         public static string TokenForUser = null;
-        public static DateTimeOffset Expiration;
+        public static DateTimeOffset expiration;
 
         private static GraphServiceClient graphClient = null;
 
@@ -39,14 +40,14 @@ namespace Microsoft_Graph_UWP_Connect_SDK
                 try
                 {
                     graphClient = new GraphServiceClient(
-                        "https://graph.microsoft.com/v1.0",
+                        "https://microsoftgraph.chinacloudapi.cn/v1.0",
                         new DelegateAuthenticationProvider(
                             async (requestMessage) =>
                             {
                                 var token = await GetTokenForUserAsync();
                                 requestMessage.Headers.Authorization = new AuthenticationHeaderValue("bearer", token);
                                 // This header has been added to identify our sample in the Microsoft Graph service.  If extracting this code for your project please remove.
-                                requestMessage.Headers.Add("SampleID", "uwp-csharp-connect-sample");
+                                requestMessage.Headers.Add("SampleID", "uwp-csharp-snippets-sample");
 
                             }));
                     return graphClient;
@@ -68,36 +69,33 @@ namespace Microsoft_Graph_UWP_Connect_SDK
         /// <returns>Token for user.</returns>
         public static async Task<string> GetTokenForUserAsync()
         {
-            AuthenticationResult authResult;
             try
             {
-                authResult = await IdentityClientApp.AcquireTokenSilentAsync(Scopes);
-                TokenForUser = authResult.Token;
-            }
-
-            catch (Exception)
-            {
-                if (TokenForUser == null || Expiration <= DateTimeOffset.UtcNow.AddMinutes(5))
+                if (TokenForUser == null || expiration <= DateTimeOffset.UtcNow.AddMinutes(5))
                 {
-                    authResult = await IdentityClientApp.AcquireTokenAsync(Scopes);
 
-                    TokenForUser = authResult.Token;
-                    Expiration = authResult.ExpiresOn;
+                    AuthenticationResult result = null;
+
+                    result = await context.AcquireTokenAsync("https://microsoftgraph.chinacloudapi.cn", clientId, returnUri);
+
+                    TokenForUser = result.AccessToken;
+                    expiration = result.ExpiresOn;
                 }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Couldn't acquire a token: " + ex.Message);
             }
 
             return TokenForUser;
         }
+
 
         /// <summary>
         /// Signs the user out of the service.
         /// </summary>
         public static void SignOut()
         {
-            foreach (var user in IdentityClientApp.Users)
-            {
-                user.SignOut();
-            }
             graphClient = null;
             TokenForUser = null;
 
