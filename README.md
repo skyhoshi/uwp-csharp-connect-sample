@@ -35,9 +35,9 @@ This sample requires the following:
 7.	Click the arrow icon on the lower-right corner of the page.
 8.	On the **Application information** page, enter **https://developer.graph.microsoft.com/** for the redirect URI value.
 9.	Once the application is successfully added, you'll be taken to the **Quick Start** page for the application. From there, select **Configure** in the top menu.
-10.	Under **permissions to other applications**, select **Add application**. In the dialog box, select the **Microsoft Graph** application. After you return to the application configuration page, select the following permissions:
+10.	Under **permissions to other applications**, select **Add application**. In the dialog box, select the **Microsoft Graph** application. After you return to the application configuration page, select the following  Delegated permissions:
 
-	* Send mail as signed-in user
+	* Send mail as a user
 	* Sign in and read user profile
  
 11.	Copy the value specified for **Client ID** on the **Configure** page.
@@ -69,15 +69,11 @@ With that in mind, it's worth looking at two methods in the helper classes in a 
 
 - **GetAuthenticatedClientAsync**
 	
-	This method of the **AuthenticationHelper** class authenticates the user with the Azure AD v2.0 endpoint.
-
-	It does this by creating an AppConfig object that specifies the app client ID, return URL, and the scopes requested by the app. It then uses this AppConfig object to construct an **OAuth2AuthenticationProvider** object, and calls the **AuthenticateAsync** method on the authentication provider. Finally, it creates a GraphServicesClient object using the **OAuth2AuthenticationProvider** object.
-
-	The **SignInCurrentUserAsync** method on the main page can then read user from this **GraphServicesClient** object and set the user email address and display name.
+	This method of the **AuthenticationHelper** class authenticates the user.
 
 - **ComposeAndSendMailAsync**
 
-	This method of the **MailHelper** class uses the Microsoft Graph SDK to authenticate the user with the Azure AD v2.0 endpoint, compose a sample email, and then send the email using the user's account.
+	This method of the **MailHelper** class uses the Microsoft Graph SDK to compose a sample email, and then send the email using the user's account.
 
 	It does this by declaring a **GraphServicesClient** object and setting it equal to the return value of **AuthenticationHelper.GetAuthenticatedClientAsync**. The method then composes the sample email, using various objects in the **Microsoft.Graph** namespace. Finally, it calls the **SendMail** method.
 
