@@ -105,7 +105,7 @@ namespace Microsoft_Graph_UWP_Connect_SDK
             MailStatus.Text = string.Empty;
             try
             {
-                await _mailHelper.ComposeAndSendMailAsync(ResourceLoader.GetForCurrentView().GetString("MailSubject"), ComposePersonalizedMail(_displayName), _mailAddress);
+                await _mailHelper.ComposeAndSendMailAsync(ResourceLoader.GetForCurrentView().GetString("MailSubject"), ResourceLoader.GetForCurrentView().GetString("MailContents"), _mailAddress);
                 MailStatus.Text = string.Format(ResourceLoader.GetForCurrentView().GetString("SendMailSuccess"), _mailAddress);
             }
             catch (Exception)
@@ -117,14 +117,6 @@ namespace Microsoft_Graph_UWP_Connect_SDK
                 ProgressBar.Visibility = Visibility.Collapsed;
             }
             
-        }
-
-        // <summary>
-        // Personalizes the email.
-        // </summary>
-        public static string ComposePersonalizedMail(string userName)
-        {
-            return String.Format(ResourceLoader.GetForCurrentView().GetString("MailContents"), userName);
         }
 
         private void Disconnect_Click(object sender, RoutedEventArgs e)
