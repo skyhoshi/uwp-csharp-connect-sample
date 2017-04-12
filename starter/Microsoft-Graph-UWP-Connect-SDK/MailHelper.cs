@@ -5,10 +5,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using System.Net.Http;
 using Microsoft.Graph;
 using System.Net.Http.Headers;
+using Windows.Storage;
 
 namespace Microsoft_Graph_UWP_Connect_SDK
 {
