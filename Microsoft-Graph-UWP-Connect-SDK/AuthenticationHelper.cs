@@ -71,8 +71,8 @@ namespace Microsoft_Graph_UWP_Connect_SDK
             AuthenticationResult authResult;
             try
             {
-                authResult = await IdentityClientApp.AcquireTokenSilentAsync(Scopes);
-                TokenForUser = authResult.Token;
+                authResult = await IdentityClientApp.AcquireTokenSilentAsync(Scopes, IdentityClientApp.Users.First());
+                TokenForUser = authResult.AccessToken;
             }
 
             catch (Exception)
@@ -81,7 +81,7 @@ namespace Microsoft_Graph_UWP_Connect_SDK
                 {
                     authResult = await IdentityClientApp.AcquireTokenAsync(Scopes);
 
-                    TokenForUser = authResult.Token;
+                    TokenForUser = authResult.AccessToken;
                     Expiration = authResult.ExpiresOn;
                 }
             }
@@ -96,7 +96,7 @@ namespace Microsoft_Graph_UWP_Connect_SDK
         {
             foreach (var user in IdentityClientApp.Users)
             {
-                user.SignOut();
+                IdentityClientApp.Remove(user);
             }
             graphClient = null;
             TokenForUser = null;
