@@ -32,7 +32,7 @@ This sample requires the following:
   * Either a [Microsoft](www.outlook.com) or [Office 365 for business account](https://msdn.microsoft.com/en-us/office/office365/howto/setup-development-environment#bk_Office365Account).
 
 <a name="register"></a>
-##Register and configure the app
+## Register and configure the app
 
 1. Sign into the [App Registration Portal](https://apps.dev.microsoft.com/) using either your personal or work or school account.
 2. Select **Add an app**.
@@ -58,7 +58,7 @@ This sample requires the following:
 
 2. Press F5 to build and debug. Run the solution and sign in with either your personal or work or school account.
 
-###Summary of key methods
+### Summary of key methods
 
 The code in the main page of the app is relatively straight-forward and self-explanatory, as the calls for authentication and email service actually occur in the helper classes. The main page code primarily consists of event handlers for the two buttons:
 
