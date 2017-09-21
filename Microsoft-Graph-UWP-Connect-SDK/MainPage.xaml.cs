@@ -2,21 +2,10 @@
 //See LICENSE in the project root for license information.
 
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Resources;
-using Windows.ApplicationModel.Resources.Core;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Storage;
 
@@ -60,20 +49,28 @@ namespace Microsoft_Graph_UWP_Connect_SDK
         /// <returns></returns>
         public async Task<bool> SignInCurrentUserAsync()
         {
-            var graphClient = AuthenticationHelper.GetAuthenticatedClient();
-
-            if (graphClient != null)
+            try
             {
-                var user = await graphClient.Me.Request().GetAsync();
-                string userId = user.Id;
-                _mailAddress = user.UserPrincipalName;
-                _displayName = user.DisplayName;
-                return true;
+                var graphClient = AuthenticationHelper.GetAuthenticatedClient();
+
+                if (graphClient != null)
+                {
+                    var user = await graphClient.Me.Request().GetAsync();
+                    string userId = user.Id;
+                    _mailAddress = user.UserPrincipalName;
+                    _displayName = user.DisplayName;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else
+            catch (Microsoft.Identity.Client.MsalException)
             {
                 return false;
             }
+ 
 
         }
 
