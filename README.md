@@ -27,7 +27,7 @@ This sample shows how to connect your Windows 10 Universal app to Office 365 usi
 
 This sample requires the following:  
 
-  * [Visual Studio 2015](https://www.visualstudio.com/en-us/downloads) 
+  * [Visual Studio 2017](https://www.visualstudio.com/en-us/downloads) 
   * Windows 10 ([development mode enabled](https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx))
   * Either a [Microsoft](www.outlook.com) or [Office 365 for business account](https://msdn.microsoft.com/en-us/office/office365/howto/setup-development-environment#bk_Office365Account).
 
